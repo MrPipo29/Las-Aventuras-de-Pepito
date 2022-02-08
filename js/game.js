@@ -32,8 +32,8 @@ var game = {
     this.imageLost.src = 'img/Game_Over.png';
     this.imagePause.src = 'img/Pause.jpg';
     var i, j, id, cardsWidth, cardsHeight
-    cardsHeight = 150
-    cardsWidth = 150
+    cardsHeight = 150 // (game.height / 5)
+    cardsWidth = 150 // (game.width / 4)
     let groups = {
       0: { 0: '', 1: '', 2: '', 3: ''},
       1: { 0: '', 1: '', 2: '', 3: ''},
@@ -86,8 +86,8 @@ var game = {
     this.state = gameStatesEnum.playing;
     this.level = gamelevelEnum.mid;
     var i, j, id, cardsWidth, cardsHeight
-    cardsHeight = 150
-    cardsWidth = 150
+    cardsHeight = 150 // (game.height / 5)
+    cardsWidth = 150 // (game.width / 4)
     let groups = {
       0: { 0: '', 1: '', 2: '', 3: '', 4: ''},
       1: { 0: '', 1: '', 2: '', 3: '', 4: ''},
@@ -139,8 +139,8 @@ var game = {
     this.state = gameStatesEnum.playing;
     this.level = gamelevelEnum.big;
     var i, j, id, cardsWidth, cardsHeight
-    cardsHeight = 110
-    cardsWidth = 110
+    cardsHeight = 110 // (game.height / 5)
+    cardsWidth = 110 // (game.width / 4)
     let groups = {
       0: { 0: '', 1: '', 2: '', 3: '', 4: '', 5: ''},
       1: { 0: '', 1: '', 2: '', 3: '', 4: '', 5: ''},
@@ -194,8 +194,8 @@ var game = {
     this.state = gameStatesEnum.playing;
     this.level = gamelevelEnum.last;
     var i, j, id, cardsWidth, cardsHeight
-    cardsHeight = 100
-    cardsWidth = 100
+    cardsHeight = 100 // (game.height / 5)
+    cardsWidth = 100 // (game.width / 4)
     let groups = {
       0: { 0: '', 1: '', 2: '', 3: '', 4: '', 5: ''},
       1: { 0: '', 1: '', 2: '', 3: '', 4: '', 5: ''},
@@ -300,8 +300,8 @@ var game = {
     if(keyboard.p && this.lastStateChange > 30) {
       this.pause();
     }
-  /*  if(keyboard.r && this.lastStateChange > 30) {
-      this.reset(); */
+    if(keyboard.r && this.lastStateChange > 30) {
+      this.reset();
     }
     if(this.time == 0){
       this.over()
